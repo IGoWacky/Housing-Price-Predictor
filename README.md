@@ -1,0 +1,1 @@
+This is my first machine learning project in python. I decided to choose a beginner friendly idea after doing some reasearch online. This was also my submission to the AI ATL hackathon that I participated in.
