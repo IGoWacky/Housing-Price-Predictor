@@ -4,3 +4,8 @@ import pandas as pd
 data = fetch_california_housing()
 dataframe = pd.DataFrame(data.data, columns=data.feature_names)
 dataframe['price'] = data.target
+
+dataframe = dataframe.drop(columns=['Latitude'])
+dataframe = dataframe.drop(columns=['Longitude'])
+dataframe = dataframe.drop(columns=['Population'])
+
