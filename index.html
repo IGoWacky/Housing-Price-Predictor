@@ -1,45 +1,110 @@
-<form action="/predict" method="POST">
-    <div class="mb-3">
-      <label for="income" class="form-label">Median Income</label>
-      <input type="number" class="form-control" id="income" name="income" step="0.01" required>
-    </div>
-  
-    <div class="mb-3">
-      <label for="house_age" class="form-label">House Age</label>
-      <input type="number" class="form-control" id="house_age" name="house_age" step="0.01" required>
-    </div>
-  
-    <div class="mb-3">
-      <label for="rooms" class="form-label">Average Rooms per Household</label>
-      <input type="number" class="form-control" id="rooms" name="rooms" step="0.01" required>
-    </div>
-  
-    <div class="mb-3">
-      <label for="bedrooms" class="form-label">Average Bedrooms</label>
-      <input type="number" class="form-control" id="bedrooms" name="bedrooms" step="0.01" required>
-    </div>
-  
-    <div class="mb-3">
-      <label for="population" class="form-label">Population in Area</label>
-      <input type="number" class="form-control" id="population" name="population" required>
-    </div>
-  
-    <div class="mb-3">
-      <label for="occupancy" class="form-label">Average Occupancy</label>
-      <input type="number" class="form-control" id="occupancy" name="occupancy" step="0.01" required>
-    </div>
-  
-    <div class="mb-3">
-      <label for="latitude" class="form-label">Latitude</label>
-      <input type="number" class="form-control" id="latitude" name="latitude" step="0.0001" required>
-    </div>
-  
-    <div class="mb-3">
-      <label for="longitude" class="form-label">Longitude</label>
-      <input type="number" class="form-control" id="longitude" name="longitude" step="0.0001" required>
-    </div>
-  
-    <div class="d-grid">
-      <button type="submit" class="btn btn-primary">Predict Price</button>
-    </div>
-</form>
+<html>
+  <head>
+    <title>House Price Predictor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form action="/predict" method="POST">
+      <div class="mb-3">
+        <label for="income" class="form-label">Median Income</label>
+        <input
+          type="number"
+          class="form-control"
+          id="income"
+          name="income"
+          step="0.01"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="house_age" class="form-label">House Age</label>
+        <input
+          type="number"
+          class="form-control"
+          id="house_age"
+          name="house_age"
+          step="0.01"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="rooms" class="form-label"
+          >Average Rooms per Household</label
+        >
+        <input
+          type="number"
+          class="form-control"
+          id="rooms"
+          name="rooms"
+          step="0.01"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="bedrooms" class="form-label">Average Bedrooms</label>
+        <input
+          type="number"
+          class="form-control"
+          id="bedrooms"
+          name="bedrooms"
+          step="0.01"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="population" class="form-label">Population in Area</label>
+        <input
+          type="number"
+          class="form-control"
+          id="population"
+          name="population"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="occupancy" class="form-label">Average Occupancy</label>
+        <input
+          type="number"
+          class="form-control"
+          id="occupancy"
+          name="occupancy"
+          step="0.01"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="latitude" class="form-label">Latitude</label>
+        <input
+          type="number"
+          class="form-control"
+          id="latitude"
+          name="latitude"
+          step="0.0001"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="longitude" class="form-label">Longitude</label>
+        <input
+          type="number"
+          class="form-control"
+          id="longitude"
+          name="longitude"
+          step="0.0001"
+          required
+        />
+      </div>
+
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary">Predict Price</button>
+      </div>
+    </form>
+  </body>
+</html>
