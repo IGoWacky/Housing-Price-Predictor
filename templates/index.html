@@ -1,17 +1,16 @@
 <html>
   <head>
     <title>House Price Predictor</title>
-    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <form action="/predict" method="POST">
       <div class="mb-3">
-        <label for="income" class="form-label">Median Income</label>
+        <label for="med_inc" class="form-label">Median Income</label>
         <input
           type="number"
           class="form-control"
-          id="income"
-          name="income"
+          id="med_inc"
+          name="med_inc"
           step="0.01"
           required
         />
@@ -30,49 +29,38 @@
       </div>
 
       <div class="mb-3">
-        <label for="rooms" class="form-label"
+        <label for="ave_rooms" class="form-label"
           >Average Rooms per Household</label
         >
         <input
           type="number"
           class="form-control"
-          id="rooms"
-          name="rooms"
+          id="ave_rooms"
+          name="ave_rooms"
           step="0.01"
           required
         />
       </div>
 
       <div class="mb-3">
-        <label for="bedrooms" class="form-label">Average Bedrooms</label>
+        <label for="ave_bedrooms" class="form-label">Average Bedrooms</label>
         <input
           type="number"
           class="form-control"
-          id="bedrooms"
-          name="bedrooms"
+          id="ave_bedrooms"
+          name="ave_bedrooms"
           step="0.01"
           required
         />
       </div>
 
       <div class="mb-3">
-        <label for="population" class="form-label">Population in Area</label>
+        <label for="ave_occupancy" class="form-label">Average Occupancy</label>
         <input
           type="number"
           class="form-control"
-          id="population"
-          name="population"
-          required
-        />
-      </div>
-
-      <div class="mb-3">
-        <label for="occupancy" class="form-label">Average Occupancy</label>
-        <input
-          type="number"
-          class="form-control"
-          id="occupancy"
-          name="occupancy"
+          id="ave_occupancy"
+          name="ave_occupancy"
           step="0.01"
           required
         />
@@ -106,5 +94,14 @@
         <button type="submit" class="btn btn-primary">Predict Price</button>
       </div>
     </form>
+    <br />
+    {% if prediction_text %}
+    <h2>{{ prediction_text }}M</h2>
+    {% endif %}
+    <style>
+      body {
+        background-color: antiquewhite;
+      }
+    </style>
   </body>
 </html>
